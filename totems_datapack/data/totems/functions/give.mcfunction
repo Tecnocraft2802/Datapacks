@@ -1,0 +1,9 @@
+## Tecnocraft2802
+
+$scoreboard players set @s totem_type $(type)
+
+$execute unless score @s totem_type matches 1..4 run give @s minecraft:totem_of_undying[custom_name='{"bold":true,"color":"gold","italic":false,"text":"Random Totem"}',lore=['[{"color":"dark_purple","italic":false,"text":"Random: "},{"color":"light_purple","italic":false,"text":"$(random)%"}]'],minecraft:custom_model_data=100,minecraft:custom_data={type:-1,random:$(random)}]
+$execute if score @s totem_type matches 1 run give @s minecraft:totem_of_undying[custom_name='{"bold":true,"color":"green","italic":false,"text":"Plant Totem"}',lore=['[{"color":"dark_purple","italic":false,"text":"Random: "},{"color":"light_purple","italic":false,"text":"$(random)%"}]'],minecraft:custom_model_data=101,minecraft:custom_data={type:$(type),random:$(random)}]
+$execute if score @s totem_type matches 2 run give @s minecraft:totem_of_undying[custom_name='{"bold":true,"color":"red","italic":false,"text":"Fire Totem"}',lore=['[{"color":"dark_purple","italic":false,"text":"Random: "},{"color":"light_purple","italic":false,"text":"$(random)%"}]'],minecraft:custom_model_data=102,minecraft:custom_data={type:$(type),random:$(random)}]
+$execute if score @s totem_type matches 3 run give @s minecraft:totem_of_undying[custom_name='{"bold":true,"color":"blue","italic":false,"text":"Water Totem"}',lore=['[{"color":"dark_purple","italic":false,"text":"Random: "},{"color":"light_purple","italic":false,"text":"$(random)%"}]'],minecraft:custom_model_data=103,minecraft:custom_data={type:$(type),random:$(random)}]
+$execute if score @s totem_type matches 4 run give @s minecraft:totem_of_undying[custom_name='{"bold":true,"color":"black","italic":false,"text":"End Totem"}',lore=['[{"color":"dark_purple","italic":false,"text":"Random: "},{"color":"light_purple","italic":false,"text":"$(random)%"}]'],minecraft:custom_model_data=104,minecraft:custom_data={type:$(type),random:$(random)}]
